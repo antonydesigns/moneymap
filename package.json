@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "css": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/tailwind-output.css --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +35,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3",
+    "tailwindcss": "^3.2.7"
   }
 }
