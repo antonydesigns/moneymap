@@ -1,3 +1,124 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* SKETCH.CSS LAYOUTS */
+
+  .full-page {
+    min-height: 100vh;
+  }
+
+  .sticky {
+    position: sticky;
+  }
+
+  .sticky-head {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
+  .fixed-foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .sticky-mid {
+    position: sticky;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
+
+  .mid-rel {
+    position: relative;
+  }
+
+  .mid-rel-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stretch {
+    align-items: stretch;
+  }
+
+  .down.stretch {
+    justify-content: stretch;
+  }
+
+  .stretch {
+    align-items: stretch;
+  }
+
+  .down.stretch {
+    justify-content: stretch;
+  }
+
+  .mid.gap {
+    gap: 10px;
+  }
+
+  .space-between {
+    justify-content: space-between;
+  }
+
+  .space-around {
+    justify-content: space-around;
+  }
+
+  .space-evenly {
+    justify-content: space-evenly;
+  }
+
+  .mid.left {
+    justify-content: start;
+  }
+
+  .mid.right {
+    justify-content: end;
+  }
+
+  .mid.head {
+    align-items: start;
+  }
+
+  .mid.foot {
+    align-items: end;
+  }
+
+  .mid.down {
+    flex-direction: column;
+  }
+
+  .mid.down-left {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mid.down-right {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .mid.down-head {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .mid.down-foot {
+    flex-direction: column;
+    justify-content: end;
+  }
+}

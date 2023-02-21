@@ -564,22 +564,16 @@ video {
   margin-right: 4rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
+.h-\[2000px\] {
+  height: 2000px;
+}
+
+.h-\[800px\] {
+  height: 800px;
 }
 
 .border {
   border-width: 1px;
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.border-red-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(127 29 29 / var(--tw-border-opacity));
 }
 
 .border-black {
@@ -587,9 +581,9 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.border-orange-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(124 45 18 / var(--tw-border-opacity));
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-green-400 {
@@ -597,16 +591,87 @@ video {
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
-.font-extrabold {
-  font-weight: 800;
-}
-
-.text-red-900 {
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
-}
-
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* SKETCH.CSS LAYOUTS */
+
+.sticky-head {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.fixed-foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.sticky-mid {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 100%;
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid.gap {
+  gap: 10px;
+}
+
+.mid.left {
+  justify-content: start;
+}
+
+.mid.right {
+  justify-content: end;
+}
+
+.mid.head {
+  align-items: start;
+}
+
+.mid.foot {
+  align-items: end;
+}
+
+.mid.down {
+  flex-direction: column;
+}
+
+.mid.down-left {
+  flex-direction: column;
+  align-items: start;
+}
+
+.mid.down-right {
+  flex-direction: column;
+  align-items: end;
+}
+
+.mid.down-head {
+  flex-direction: column;
+  justify-content: start;
+}
+
+.mid.down-foot {
+  flex-direction: column;
+  justify-content: end;
 }
