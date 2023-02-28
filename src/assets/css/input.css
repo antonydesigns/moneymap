@@ -11,13 +11,20 @@
     transition: 200ms;
   }
 
+  .simulate-mobile {
+    width: 500px;
+    border: 1px solid black;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+
   td,
   th {
     @apply border border-black p-3 text-center;
   }
 
-  td.details {
-    @apply text-start;
+  .ZZZ {
+    @apply border border-black;
   }
 
   /* SKETCH.CSS LAYOUTS */

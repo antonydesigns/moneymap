@@ -561,9 +561,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mx-2{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.relative{
+  position: relative;
+}
+
+.right-4{
+  right: 1rem;
 }
 
 .mx-4{
@@ -571,20 +574,41 @@ video {
   margin-right: 1rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.block{
+  display: block;
 }
 
 .table{
   display: table;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .table-auto{
   table-layout: auto;
 }
 
+.columns-2{
+  -webkit-columns: 2;
+          columns: 2;
+}
+
 .rounded{
   border-radius: 0.25rem;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .border{
@@ -606,14 +630,38 @@ video {
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
+.p-1{
+  padding: 0.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.pr-3{
+  padding-right: 0.75rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-3xl{
@@ -631,6 +679,13 @@ video {
   transition: 200ms;
 }
 
+.simulate-mobile {
+  width: 500px;
+  border: 1px solid black;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
 td,
   th{
   border-width: 1px;
@@ -638,10 +693,6 @@ td,
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   padding: 0.75rem;
   text-align: center;
-}
-
-td.details{
-  text-align: start;
 }
 
 /* SKETCH.CSS LAYOUTS */

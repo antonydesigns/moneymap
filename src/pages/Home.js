@@ -3,45 +3,41 @@ import { useEffect, useState } from "react";
 
 function Home() {
   const [fetchError, setFetchError] = useState(null);
-  const [transactions, setTransactions] = useState(null);
+  const [comments, setComments] = useState(null);
 
   useEffect(() => {
-    const fetchTransactions = async () => {
-      const { data, error } = await supabase.from("transactions").select();
+    const fetchComments = async () => {
+      const { data, error } = await supabase.from("comments").select();
       if (error) {
-        setFetchError("Cannot fetch transactions");
-        setTransactions(null);
+        setFetchError("Cannot fetch comments");
+        setComments(null);
         console.log(error);
       }
       if (data) {
         setFetchError(null);
-        setTransactions(data);
+        setComments(data);
       }
     };
-    fetchTransactions();
+    fetchComments();
   }, []);
 
   return (
     <div className="page home">
       <div className="result mid">
         {fetchError && <p>{fetchError}</p>} {/* if error exists */}
-        {transactions && (
-          <table className="transactions mt-5 table-auto">
+        {comments && (
+          <table className="comments mt-5 table-auto">
             <thead>
               <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
-                <th>Detail</th>
+                <th>Name</th>
+                <th>Comment</th>
               </tr>
             </thead>
             <tbody>
-              {transactions.map((entry) => (
+              {comments.map((entry) => (
                 <tr key={entry.id}>
-                  <td>{entry.type}</td>
-                  <td>{entry.amount}</td>
-                  <td>{entry.currency}</td>
-                  <td className="details">{entry.details}</td>
+                  <td>{entry.name}</td>
+                  <td>{entry.comment}</td>
                 </tr>
               ))}
             </tbody>

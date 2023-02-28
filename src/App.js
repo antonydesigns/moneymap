@@ -16,13 +16,15 @@ import Header from "./components/Header";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <div class="mx-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/:id" element={<Update />} />
-        </Routes>
+      <div className="simulate-mobile">
+        <Header />
+        <div class="mx-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/:id" element={<Update />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );
