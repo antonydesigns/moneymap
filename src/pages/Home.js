@@ -45,6 +45,9 @@ function Home() {
                     <button className="material-symbols-rounded border-black bg-yellow-300">
                       edit
                     </button>
+                    <button className="material-symbols-rounded border-black bg-red-500">
+                      delete
+                    </button>
                   </td>
                 </tr>
               ))}
