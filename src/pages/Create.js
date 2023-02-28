@@ -21,7 +21,7 @@ function Create() {
 
     const { data, error } = await supabase
       .from("comments")
-      .insert([{ username, comment }])
+      .insert({ username, comment })
       .select();
 
     if (error) {

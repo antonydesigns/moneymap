@@ -45,7 +45,7 @@ function Update() {
 
     const { data, error } = await supabase
       .from("comments")
-      .insert([{ username, comment }])
+      .update({ username, comment })
       .select();
 
     if (error) {
