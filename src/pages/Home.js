@@ -1,5 +1,6 @@
 import supabase from "../supabaseClient";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [fetchError, setFetchError] = useState(null);
@@ -42,9 +43,12 @@ function Home() {
                     <span className="whitespace-pre-line">{entry.comment}</span>
                   </td>
                   <td className="border-l-0">
-                    <button className="material-symbols-rounded border-black bg-yellow-300">
+                    <Link
+                      to={"/" + entry.id}
+                      className="material-symbols-rounded border-black bg-yellow-300"
+                    >
                       edit
-                    </button>
+                    </Link>
                     <button className="material-symbols-rounded border-black bg-red-500">
                       delete
                     </button>
