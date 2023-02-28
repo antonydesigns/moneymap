@@ -31,15 +31,20 @@ function Home() {
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Comment</th>
+                <th colSpan="2">Comment</th>
               </tr>
             </thead>
             <tbody>
               {comments.map((entry) => (
                 <tr key={entry.id}>
                   <td>{entry.username}</td>
-                  <td className="whitespace-pre-line text-left">
-                    {entry.comment}
+                  <td className="border-r-0 text-left">
+                    <span className="whitespace-pre-line">{entry.comment}</span>
+                  </td>
+                  <td className="border-l-0">
+                    <button className="material-symbols-rounded border-black bg-yellow-300">
+                      edit
+                    </button>
                   </td>
                 </tr>
               ))}

@@ -31,6 +31,7 @@ function Create() {
       setFormError("");
       setUsername("");
       setComment("");
+      navigate("/");
     }
   };
 
