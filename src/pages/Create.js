@@ -10,6 +10,7 @@ function Create() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("form submitted");
 
     if (!username || !comment) {
       setFormError(
@@ -20,23 +21,22 @@ function Create() {
 
     const { data, error } = await supabase
       .from("comments")
-      .insert([{ username, comment }]);
+      .insert([{ username, comment }])
+      .select();
 
     if (error) {
       console.log(error);
     }
     if (data) {
       setFormError("");
-      console.log(data);
       setUsername("");
       setComment("");
-      navigate("/");
     }
   };
 
   return (
     <div className="page create">
-      <form onSubmit={handleSubmit} className="mt-5">
+      <form className="mt-5">
         <fieldset className="">
           <label htmlFor="username" className="">
             <p>Name:</p>
@@ -52,8 +52,9 @@ function Create() {
           <label htmlFor="comment" className="">
             <p className="p-1 pr-3">Comments:</p>
           </label>
-          <textarea
-            className="h-min-20 block w-full rounded-md border border-black p-1"
+          <input
+            type="text"
+            className=" block w-full rounded-md border border-black p-1"
             id="comment"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
@@ -61,7 +62,10 @@ function Create() {
         </fieldset>
 
         <div className="mid mt-10">
-          <button className="mid rounded-lg border border-black bg-green-400 p-2 hover:bg-green-200">
+          <button
+            onClick={handleSubmit}
+            className="mid rounded-lg border border-black bg-green-400 p-2 hover:bg-green-200"
+          >
             Post comment
           </button>
         </div>
