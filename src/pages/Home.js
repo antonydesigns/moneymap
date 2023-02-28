@@ -38,7 +38,9 @@ function Home() {
               {comments.map((entry) => (
                 <tr key={entry.id}>
                   <td>{entry.username}</td>
-                  <td>{entry.comment}</td>
+                  <td className="whitespace-pre-line text-left">
+                    {entry.comment}
+                  </td>
                 </tr>
               ))}
             </tbody>
