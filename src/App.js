@@ -17,11 +17,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/:id" element={<Update />} />
-      </Routes>
+      <div class="mx-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/:id" element={<Update />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

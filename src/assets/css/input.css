@@ -11,6 +11,15 @@
     transition: 200ms;
   }
 
+  td,
+  th {
+    @apply border border-black p-3 text-center;
+  }
+
+  td.details {
+    @apply text-start;
+  }
+
   /* SKETCH.CSS LAYOUTS */
 
   .full-page {
