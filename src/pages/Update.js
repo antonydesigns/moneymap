@@ -62,6 +62,11 @@ function Update() {
 
   return (
     <div className="page update">
+      {formError && (
+        <p className="pd-2 mt-5 rounded-lg border border-red-500 text-center text-red-500">
+          {formError}
+        </p>
+      )}
       <form className="mt-5">
         <fieldset className="">
           <label htmlFor="username" className="">
@@ -90,12 +95,11 @@ function Update() {
         <div className="mid mt-10">
           <button
             onClick={handleSubmit}
-            className="mid rounded-lg border border-black bg-yellow-300 p-2 hover:bg-green-200"
+            className="mid rounded-lg border border-black bg-yellow-300 p-2 hover:bg-yellow-100"
           >
             Edit comment
           </button>
         </div>
-        {formError && <p>{formError}</p>}
       </form>
     </div>
   );
