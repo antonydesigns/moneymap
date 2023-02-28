@@ -1,7 +1,9 @@
 import supabase from "../supabaseClient";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function Create() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [comment, setComment] = useState("");
   const [formError, setFormError] = useState("");
@@ -28,6 +30,7 @@ function Create() {
       console.log(data);
       setUsername("");
       setComment("");
+      navigate("/");
     }
   };
 
