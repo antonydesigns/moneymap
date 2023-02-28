@@ -14,9 +14,12 @@ function Header() {
           Home
         </Link>
 
-        <div className="navlink block rounded border border-black bg-green-400 px-2 text-center hover:bg-green-200">
-          <Link to="/create">Create New</Link>
-        </div>
+        <Link
+          to="/create"
+          className="navlink block rounded border border-black bg-green-400 px-2 text-center hover:bg-green-200"
+        >
+          Create New
+        </Link>
       </div>
     </nav>
   );
