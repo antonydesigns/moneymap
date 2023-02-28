@@ -53,7 +53,7 @@ function Create() {
             <p className="p-1 pr-3">Comments:</p>
           </label>
           <textarea
-            multiline={true}
+            multiline="true"
             className="h-min-20 block w-full rounded-md border border-black p-1"
             id="comment"
             value={comment}
