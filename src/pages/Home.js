@@ -8,7 +8,10 @@ function Home() {
 
   useEffect(() => {
     const fetchComments = async () => {
-      const { data, error } = await supabase.from("comments").select();
+      const { data, error } = await supabase
+        .from("comments")
+        .select()
+        .order("id", true);
       if (error) {
         setFetchError("Cannot fetch comments");
         setComments(null);
