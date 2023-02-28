@@ -689,6 +689,10 @@ td,
 
 /* SKETCH.CSS LAYOUTS */
 
+.full-page {
+  min-height: 100vh;
+}
+
 .mid {
   display: flex;
   justify-content: center;

@@ -25,6 +25,7 @@ function Home() {
     <div className="page home">
       <div className="result mid">
         {fetchError && <p>{fetchError}</p>} {/* if error exists */}
+        {!comments && <p>Loading...</p>}
         {comments && (
           <table className="comments mt-5 table-auto">
             <thead>
