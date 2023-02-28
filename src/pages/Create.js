@@ -37,6 +37,12 @@ function Create() {
 
   return (
     <div className="page create">
+      {formError && (
+        <p className="pd-2 mt-5 rounded-lg border border-red-500 text-center text-red-500">
+          {formError}
+        </p>
+      )}
+
       <form className="mt-5">
         <fieldset className="">
           <label htmlFor="username" className="">
@@ -70,7 +76,6 @@ function Create() {
             Post comment
           </button>
         </div>
-        {formError && <p>{formError}</p>}
       </form>
     </div>
   );

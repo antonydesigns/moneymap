@@ -46,6 +46,7 @@ function Update() {
     const { data, error } = await supabase
       .from("comments")
       .update({ username, comment })
+      .eq("id", id)
       .select();
 
     if (error) {
