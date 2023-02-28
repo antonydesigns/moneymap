@@ -7,7 +7,7 @@
 @layer utilities {
   /* CUSTOM CSS */
 
-  * {
+  *:not(textarea) {
     transition: 200ms;
   }
 
