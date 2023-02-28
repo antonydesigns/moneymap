@@ -1,12 +1,34 @@
+import supabase from "../supabaseClient";
 import { useState } from "react";
 
 function Create() {
   const [username, setUsername] = useState("");
   const [comment, setComment] = useState("");
-  const [formError, setFormError] = useState(null);
+  const [formError, setFormError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!username || !comment) {
+      setFormError(
+        "One or more fields are missing. Please fill them correctly."
+      );
+      return;
+    }
+
+    const { data, error } = await supabase
+      .from("comments")
+      .insert([{ username, comment }]);
+
+    if (error) {
+      console.log(error);
+    }
+    if (data) {
+      setFormError("");
+      console.log(data);
+      setUsername("");
+      setComment("");
+    }
   };
 
   return (
@@ -40,7 +62,7 @@ function Create() {
             Post comment
           </button>
         </div>
-        {formError && <p>Error in the form</p>}
+        {formError && <p>{formError}</p>}
       </form>
     </div>
   );

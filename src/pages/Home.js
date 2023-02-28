@@ -36,7 +36,7 @@ function Home() {
             <tbody>
               {comments.map((entry) => (
                 <tr key={entry.id}>
-                  <td>{entry.name}</td>
+                  <td>{entry.username}</td>
                   <td>{entry.comment}</td>
                 </tr>
               ))}

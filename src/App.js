@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <div className="simulate-mobile">
         <Header />
-        <div class="mx-4">
+        <div className="mx-4">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
